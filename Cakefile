@@ -26,6 +26,11 @@ task "gitignore", "create a .gitignore for node-ec2 based on git branch", ->
                 
                 '''
 
+    if branch is "gh-pages"
+      gitignore += '''
+                   lib
+                   '''
+
     if branch is "master"
       gitignore += '''
                    documentation
@@ -46,6 +51,6 @@ task "compile", "compile the CoffeeScript into JavaScript", ->
 
 task "clean", "rebuild the CoffeeScript docco documentation.", ->
   currentBranch (branch) ->
-    if branch isnt "master"
+    if branch is "master"
       exec "rm -rf documentation lib", (err) ->
         throw err if err
