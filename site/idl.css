@@ -170,6 +170,14 @@ h3.namespace, h3.function, h3.event, h3.class {
 h3.namespace, h3.class {
     border-bottom: 2px solid gray;
 }
+.parameter {
+    margin-left: 1.5em;
+    font-size: 0.75em;
+}
+.parameter h4 {
+    margin: 0;
+    font-family: Monaco, Consolas, "Lucida Console", monospace;
+}
 
 /*---------------------- Syntax Highlighting -----------------------------*/
 td.linenos { background-color: #f0f0f0; padding-right: 10px; }
